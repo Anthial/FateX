@@ -5,7 +5,7 @@ export class ExtraItem extends StuntItem {
         return "extra";
     }
 
-    static getActorSheetData(sheetData) {
+    static async getActorSheetData(sheetData) {
         sheetData = StuntItem.getActorSheetData(sheetData);
 
         for (const extra of sheetData.extras) {
@@ -16,8 +16,8 @@ export class ExtraItem extends StuntItem {
         return sheetData;
     }
 
-    static getSheetData(sheetData) {
+    static async getSheetData(sheetData) {
         // @ts-ignore
-        sheetData.enrichedDescription = await TextEditor.enrichHTML(sheetData.system.description, { async: true });
+        sheetData.enrichedDescription = await       TextEditor.enrichHTML(sheetData.system.description, { async: true });
     }
 }

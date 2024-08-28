@@ -4,7 +4,7 @@ import { marked } from "marked";
 export class StuntItem extends BaseItem {
     static documentName = "stunt";
 
-    static getActorSheetData(sheetData) {
+    static async getActorSheetData(sheetData) {
         if (CONFIG.FateX.global.useMarkdown) {
             for (const stunt of sheetData.stunts) {
                 stunt.system.markdown = marked(stunt.data.description);
@@ -19,7 +19,7 @@ export class StuntItem extends BaseItem {
         return sheetData;
     }
 
-    static getSheetData(sheetData) {
+    static async getSheetData(sheetData) {
         // @ts-ignore
         sheetData.enrichedDescription = await TextEditor.enrichHTML(sheetData.system.description, { async: true });
     }
