@@ -13,7 +13,7 @@ export class StuntItem extends BaseItem {
 
         for (const stunt of sheetData.stunts) {
             // @ts-ignore
-            stunt.system.description = TextEditor.enrichHTML(stunt.system.description, { async: false });
+            stunt.system.description = TextEditor.enrichHTML(stunt.system.description, { async: true });
         }
 
         return sheetData;
@@ -21,7 +21,7 @@ export class StuntItem extends BaseItem {
 
     static getSheetData(sheetData) {
         // @ts-ignore
-        sheetData.enrichedDescription = TextEditor.enrichHTML(sheetData.system.description, { async: false });
+        sheetData.enrichedDescription = TextEditor.enrichHTML(sheetData.system.description, { async: true });
     }
 
     static activateActorSheetListeners(html, sheet) {
