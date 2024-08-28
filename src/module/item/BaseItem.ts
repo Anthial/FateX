@@ -26,14 +26,14 @@ export abstract class BaseItem {
     /**
      * Allows each item to add data to its own sheet.
      */
-    static getSheetData(sheetData, _item) {
+    static async getSheetData(sheetData, _item) {
         return sheetData;
     }
 
     /**
      * Allows each item to add data to its owners actorsheet.
      */
-    static getActorSheetData(sheetData, _actor) {
+    static async getActorSheetData(sheetData, _actor) {
         return sheetData;
     }
 
