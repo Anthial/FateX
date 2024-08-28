@@ -1,6 +1,6 @@
 export class ItemSheetFate extends ItemSheet {
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["fatex", "fatex-sheet", "fatex-sheet--item", "sheet"],
             scrollY: [".fatex-desk__content"],
             width: 575,

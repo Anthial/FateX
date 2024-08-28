@@ -6,7 +6,7 @@ import { ActorDataProperties } from "@league-of-foundry-developers/foundry-vtt-t
 
 export class TemplateActorPicker extends TemplateActorSettings {
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             title: game.i18n.format("SIDEBAR.Create", { type: game.i18n.localize("DOCUMENT.Actor") }),
             template: "/systems/fatex/templates/apps/template-actors-picker.hbs",
             id: "template-actor-picker",

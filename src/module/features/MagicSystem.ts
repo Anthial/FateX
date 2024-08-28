@@ -1,5 +1,5 @@
 // @ts-nocheck
-export class MagicDie extends FateDie {
+export class MagicDie extends foundry.dice.terms.FateDie {
     static DENOMINATION = "m";
 
     roll({ minimize = false, maximize = false } = {}) {

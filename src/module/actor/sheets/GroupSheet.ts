@@ -30,7 +30,7 @@ export class GroupSheet extends ActorSheet {
      * Sets the default options for every actor group sheet
      */
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["fatex fatex-sheet sheet actor_group_overview actor_group_overview--front"],
             resizable: true,
             template: "/systems/fatex/templates/actor/group.hbs",

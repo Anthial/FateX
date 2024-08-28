@@ -3,7 +3,7 @@ import { GroupSheet } from "./GroupSheet";
 
 export class InlineActorSheetFate extends CharacterSheet {
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             group: undefined,
             width: "auto",
             height: "auto",

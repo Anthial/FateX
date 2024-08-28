@@ -3,7 +3,7 @@ import { SheetSetup } from "../sheet-setup/SheetSetup";
 
 export class TemplateActorSettings extends FormApplication<any, any, any> {
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             title: game.i18n.localize("FAx.Settings.Templates.App.Title"),
             template: "/systems/fatex/templates/apps/template-actors.hbs",
             id: "template-actors",
