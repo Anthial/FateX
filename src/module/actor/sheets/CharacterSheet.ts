@@ -108,7 +108,7 @@ export class CharacterSheet extends ActorSheet<CharacterSheetOptions> {
 
         // Allow every item type to add data to the actorsheet
         for (const itemType in CONFIG.FateX.itemClasses) {
-            data = CONFIG.FateX.itemClasses[itemType].getActorSheetData(data, this);
+            data = await CONFIG.FateX.itemClasses[itemType].getActorSheetData(data, this);
         }
 
         return data;

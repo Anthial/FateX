@@ -7,7 +7,7 @@ export class ItemSheetFate extends ItemSheet {
         });
     }
 
-    getData() {
+    async getData() {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         let data: any = super.getData();
 
@@ -20,12 +20,12 @@ export class ItemSheetFate extends ItemSheet {
         data.isOwnedBy = this.actor ? this.actor.name : false;
 
         // Let every item type manipulate its own sheet data
-        data = CONFIG.FateX.itemClasses[this.item.type]?.getSheetData(data, this) || data;
+        data = await CONFIG.FateX.itemClasses[this.item.type]?.getSheetData(data, this) || data;
 
         // Let every component manipulate an items' sheet data
         for (const sheetComponent in CONFIG.FateX.sheetComponents.item) {
             if (Object.prototype.hasOwnProperty.call(CONFIG.FateX.sheetComponents.item, sheetComponent)) {
-                data = CONFIG.FateX.sheetComponents.item[sheetComponent].getSheetData(data, this);
+                data = await CONFIG.FateX.sheetComponents.item[sheetComponent].getSheetData(data, this);
             }
         }
 
