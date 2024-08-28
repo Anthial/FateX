@@ -90,7 +90,7 @@ export class CharacterSheet extends ActorSheet<CharacterSheetOptions> {
 
         // Add actor, actor data and item
         // @ts-ignore
-        data.actor = duplicate(this.actor);
+        data.actor = foundry.utils.duplicate(this.actor);
         data.data = data.actor.system;
         data.items = this.actor.items.map((item) => item);
         data.items.sort((a: ItemData, b: ItemData) => (a.sort || 0) - (b.sort || 0));

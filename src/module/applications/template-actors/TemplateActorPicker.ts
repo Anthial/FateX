@@ -69,7 +69,7 @@ export class TemplateActorPicker extends TemplateActorSettings {
         e.stopPropagation();
 
         const data = e.currentTarget.dataset;
-        const template = duplicate(game.actors?.get(data.template));
+        const template = foundry.utils.duplicate(game.actors?.get(data.template));
         const fatexFlags = template.flags?.fatex as Record<string, unknown>;
 
         // Add current template as a flag for later use

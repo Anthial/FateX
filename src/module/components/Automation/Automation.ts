@@ -154,7 +154,7 @@ export class Automation extends BaseComponent {
      */
     static async addSkillReference(document, type = TYPES.STATUS) {
         const currentReferences = this.getSkillReferences(document);
-        const references = duplicate(currentReferences);
+        const references = foundry.utils.duplicate(currentReferences);
 
         references.push({
             type: type,
@@ -173,7 +173,7 @@ export class Automation extends BaseComponent {
 
     static async changeSkillReference(document, index, field, value) {
         const currentReferences = this.getSkillReferences(document);
-        const references = duplicate(currentReferences);
+        const references = foundry.utils.duplicate(currentReferences);
         const reference = references[index];
 
         // Change field on reference to new value
