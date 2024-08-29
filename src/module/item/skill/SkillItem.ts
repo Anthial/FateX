@@ -140,7 +140,7 @@ export class SkillItem extends BaseItem {
             return;
         }
 
-        await fateRoll.roll();
+        fateRoll.roll();
 
         const fateChatCard = FateChatCard.create(actor, [fateRoll]);
         await fateChatCard.sendToChat();
