@@ -6,7 +6,7 @@ export class ExtraItem extends StuntItem {
     }
 
     static async getActorSheetData(sheetData) {
-        sheetData = StuntItem.getActorSheetData(sheetData);
+        sheetData = await StuntItem.getActorSheetData(sheetData);
 
         for (const extra of sheetData.extras) {
             // @ts-ignore
