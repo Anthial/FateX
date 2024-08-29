@@ -14,7 +14,7 @@ export class MagicDie extends foundry.dice.terms.FateDie {
         return roll;
     }
 }
-
+                
 export class MagicSystem {
     static hooks() {
         Hooks.once("init", () => {
