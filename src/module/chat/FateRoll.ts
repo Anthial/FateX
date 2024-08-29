@@ -40,7 +40,8 @@ export class FateRoll extends FateRollDataModel {
         }
 
         const rollMode = this.options.rollmode ?? ROLL_MODES["4dF"];
-        const roll = await new Roll(rollMode).roll().evaluate();
+        const rollThrough = new Roll(rollMode);
+        const roll = await rollThrough.evaluate();
 
         if (this.is2d6Roll) {
             this.updateSource({
@@ -59,7 +60,8 @@ export class FateRoll extends FateRollDataModel {
     }
 
     async rollMagic(userId = "", magicCount: number) {
-        const roll = (await new Roll(`${magicCount}dM + ${4 - magicCount}dF`).roll()).evaluate();
+        const rollThrough = new Roll(`${magicCount}dM + ${4 - magicCount}dF`);
+        const roll = await rollThrough.evaluate();     
 
         this.updateSource({
             faces: [...roll.terms[0].results, ...roll.terms[2].results].map((r) => r.count ?? r.result),
