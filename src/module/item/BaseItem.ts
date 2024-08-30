@@ -76,8 +76,12 @@ export abstract class BaseItem {
         e.stopPropagation();
 
         const data = e.currentTarget.dataset;
-        console.log("DATA;" + data)
-        console.log("SHEET ITEMS" + sheet.actor.items)
+        data.map((obj) => {
+            console.log("DATA;" + obj)
+        })
+        sheet.actor.items.map((item) => {
+            console.log("SHEET ITEMS" + item)
+        })
         const item = sheet.actor.items.get(data.item);
 
         if (item) {
