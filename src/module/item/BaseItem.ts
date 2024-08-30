@@ -76,9 +76,6 @@ export abstract class BaseItem {
         e.stopPropagation();
 
         const data = e.currentTarget.dataset;
-        data.map((obj) => {
-            console.log("DATA;" + obj)
-        })
         sheet.actor.items.map((item) => {
             console.log("SHEET ITEMS" + item)
         })

@@ -107,7 +107,7 @@ export class SkillItem extends BaseItem {
 
             await skill.update(
                 {
-                    "data.rank": doIncrement ? rank + 1 : rank - 1,
+                    "system.rank": doIncrement ? rank + 1 : rank - 1,
                 },
                 {}
             );
