@@ -1,5 +1,17 @@
-# The extended Fate game system for FoundryVTT
+# The extended Fate game system for FoundryVTT 
+## (Shitty V12 Patch - no, it doesn't work well)
+### Current Bugs:
+#### - Sheets are the enemy, and they do not like being changed.
+#### - Saving Consequences? Nope!
+#### - Saving Aspects? You wish.
+#### - Changing Stress Boxes
+#### - Datamodel issue? Maybe. 
 
+### Things that work:
+#### - Rolls
+#### - Skill modification (unless you click try to do it after clicking the cogwheel)
+#### - Descriptions, the reason I started doing this to begin with.
+#### - Other things, probably
 
 <p align="center">
 <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/anvil-vtt/fatex"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/anvil-vtt/fatex"> <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/anvil-vtt/fatex/total" /> <img alt="GitHub Releases" src="https://img.shields.io/github/downloads/anvil-vtt/fatex/latest/total" /> <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/anvil-vtt/fatex?label=latest%20release" /> 
