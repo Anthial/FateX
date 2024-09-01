@@ -242,7 +242,7 @@ export class Automation extends BaseComponent {
     }
 
     static getActorSkillByName(actor, skillId) {
-        const actorData = duplicate(actor);
+        const actorData = foundry.utils.duplicate(actor);
         const items = actorData.items;
 
         // Filter single actors skills by id
