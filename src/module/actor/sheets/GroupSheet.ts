@@ -39,7 +39,7 @@ export class GroupSheet extends ActorSheet {
         });
     }
 
-    getData() {
+    async getData() {
         // Basic fields and flags
         const data: any = {
             owner: this.actor.isOwner,
