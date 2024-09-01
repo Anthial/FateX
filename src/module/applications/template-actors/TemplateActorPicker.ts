@@ -16,8 +16,8 @@ export class TemplateActorPicker extends TemplateActorSettings {
         });
     }
 
-    getData() {
-        const data = super.getData();
+    async getData() {
+        const data = await super.getData();
 
         // @ts-ignore
         data.AppTitle = game.i18n.format("SIDEBAR.Create", { type: game.i18n.localize("DOCUMENT.Actor") });

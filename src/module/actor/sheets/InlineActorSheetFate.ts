@@ -17,8 +17,8 @@ export class InlineActorSheetFate extends CharacterSheet {
         });
     }
 
-    getData(_options?: Application.RenderOptions) {
-        const data = super.getData();
+    async getData(_options?: Application.RenderOptions) {
+        const data = await super.getData();
 
         if (this.options.referenceID) {
             // @ts-ignore

@@ -13,7 +13,7 @@ export class TemplateActorSettings extends FormApplication<any, any, any> {
         });
     }
 
-    getData() {
+    async getData() {
         const filteredActors = duplicate(game.actors?.filter((actor) => (actor as FateActor).isTemplateActor) as Record<any, any>[]);
 
         filteredActors.forEach((actorDocument) => {

@@ -22,10 +22,10 @@ export class SubItems extends BaseComponent {
         });
     }
 
-    static getSheetData(sheetData, _sheet) {
+    static async getSheetData(sheetData, _sheet) {
         // @ts-ignore
-        //sheetData.subItems = game.items?.contents.filter((item) => item.data.type == "extra" && item.system.parentID == _sheet.document.id);
-        //console.log(sheetData);
+        sheetData.subItems = game.items?.contents.filter((item) => item.data.type == "extra" && item.system.parentID == _sheet.document.id);
+        console.log(sheetData);
         return sheetData;
     }
 

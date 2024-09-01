@@ -18,6 +18,7 @@ export class ExtraItem extends StuntItem {
 
     static async getSheetData(sheetData) {
         // @ts-ignore
-        sheetData.enrichedDescription = await       TextEditor.enrichHTML(sheetData.system.description, { async: true });
+        sheetData.enrichedDescription = await TextEditor.enrichHTML(sheetData.system.description, { async: true });
     }
+    
 }
