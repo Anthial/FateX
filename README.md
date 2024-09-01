@@ -1,5 +1,5 @@
 # The extended Fate game system for FoundryVTT 
-## (Shitty V12 Patch - no, it doesn't work well)
+## (Shitty V12 Patch - ok, it sorta works well)
 ### Current Bugs:
 #### - Datamodel issue? Maybe. 
 
