@@ -20,21 +20,39 @@
         <div class="fatex-header__fate-points-wrapper">
             <input
                 class="fatex-text-input fatex-text-input--fp"
-                name="data.fatepoints.current"
+                name="system.fatepoints.current"
                 type="text"
-                value="{{system.fatepoints.current}}"
+                value="{{actor.system.fatepoints.current}}"
+                data-key="system.fatepoints.current"
+                onfocusout="updateActorField(this)"
             >
 
             <span class="fatex-header__fatepoint-divider"> / </span>
 
             <input
                 class="fatex-text-input fatex-text-input--fp"
-                name="data.fatepoints.refresh"
+                name="system.fatepoints.refresh"
                 type="text"
-                value="{{system.fatepoints.refresh}}"
+                value="{{actor.system.fatepoints.refresh}}"
+                data-key="system.fatepoints.refresh"
+                onfocusout="updateActorField(this)"
             >
         </div>
     </div>
+    <script type="text/javascript">
+    function updateActorField(input) {
+        const key = input.dataset.key;
+        const value = input.value;
+        const actor = game.actors.get('{{actor.id}}'); // or token if it's a token actor
+
+        // Prepare the update object dynamically
+        let updateData = {};
+        updateData[key] = value;
+
+        // Update the actor's field without reloading
+        actor.update(updateData);
+    }
+    </script>
 
     {{> "systems/fatex/templates/components/header-logo.hbs"}}
 </header>
