@@ -111,6 +111,14 @@ export class CharacterSheet extends ActorSheet<CharacterSheetOptions> {
             data = await CONFIG.FateX.itemClasses[itemType].getActorSheetData(data, this);
         }
 
+        // Print every object in data
+        for (const key in data) {
+            if (data.hasOwnProperty(key)) {
+                console.log(`${key}:`, data[key]);
+            }
+        }
+
+
         return data;
     }
 
