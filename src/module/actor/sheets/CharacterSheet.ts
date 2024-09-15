@@ -113,7 +113,7 @@ export class CharacterSheet extends ActorSheet<CharacterSheetOptions> {
 
         // Print every object in data
         for (const key in data) {
-            if (data.hasOwnProperty(key)) {
+            if (Object.prototype.hasOwnProperty.call(data, key)) {
                 console.log(`${key}:`, data[key]);
             }
         }
