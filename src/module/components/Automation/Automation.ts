@@ -43,12 +43,6 @@ export class Automation extends BaseComponent {
         sheetData.availableConjunctions = this.getAvailableConjunctions();
         sheetData.availableBoxCount = this.getAvailableBoxCount();
         sheetData.availableSkills = this.getAllAvailableSkills();
-        // Print every object in data
-        for (const key in sheetData) {
-            if (Object.prototype.hasOwnProperty.call(sheetData, key)) {
-                console.log(`${key}:`, sheetData[key]);
-            }
-        }
 
         return sheetData;
     }
