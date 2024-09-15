@@ -23,8 +23,6 @@
                 name="system.fatepoints.current"
                 type="text"
                 value="{{actor.system.fatepoints.current}}"
-                data-key="system.fatepoints.current"
-                onfocusout="updateActorField(this)"
             >
 
             <span class="fatex-header__fatepoint-divider"> / </span>
@@ -34,16 +32,9 @@
                 name="system.fatepoints.refresh"
                 type="text"
                 value="{{actor.system.fatepoints.refresh}}"
-                data-key="system.fatepoints.refresh"
-                onfocusout="updateActorField(this)"
             >
         </div>
     </div>
-    <script type="text/javascript">
-    function updateActorField(input) {
-        console.log(input)
-    }
-    </script>
 
     {{> "systems/fatex/templates/components/header-logo.hbs"}}
 </header>
