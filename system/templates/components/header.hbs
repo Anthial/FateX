@@ -41,16 +41,7 @@
     </div>
     <script type="text/javascript">
     function updateActorField(input) {
-        const key = input.dataset.key;
-        const value = input.value;
-        const actor = game.actors.get('{{actor.id}}'); // or token if it's a token actor
-
-        // Prepare the update object dynamically
-        let updateData = {};
-        updateData[key] = value;
-
-        // Update the actor's field without reloading
-        actor.update(updateData);
+        console.log(input)
     }
     </script>
 
